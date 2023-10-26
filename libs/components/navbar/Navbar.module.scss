@@ -30,6 +30,10 @@ $paddingUnit: 1em;
       color: orange;
    }
 
+   .nav-toggle:checked + .navs {
+      display: block !important;
+   }
+
    .brand {
       display: flex;
       align-items: center;
@@ -40,6 +44,7 @@ $paddingUnit: 1em;
    }
 
    .navs {
+      display: none !important;
       position: absolute;
       right: 0;
       top: 2em;

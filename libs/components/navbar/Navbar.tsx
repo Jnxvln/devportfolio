@@ -1,7 +1,23 @@
+'use client'
+import { useEffect, useRef } from 'react'
 import styles from './Navbar.module.scss'
 import Link from 'next/link'
 
 export default function Navbar() {
+   const navToggleRef = useRef<HTMLInputElement>(null)
+
+   useEffect(() => {
+      window.addEventListener('click', (evt) => {
+         if (evt?.target?.id === 'nav-label') {
+            console.log('clicked LABEL')
+            // evt.stopPropagation()
+         } else {
+            console.log('clicked BODY')
+            // navToggleRef.current.checked = false
+         }
+      })
+   }, [])
+
    return (
       <nav className={styles['nav']}>
          {/* Brand */}
@@ -9,10 +25,15 @@ export default function Navbar() {
             <Link href="/">JC</Link>
          </div>
 
-         <input type="checkbox" id="nav-toggle" className={styles['nav-toggle']} />
          <label htmlFor="nav-toggle" id="nav-label" className={styles['nav-label']}>
             &#9776;
          </label>
+         <input
+            ref={navToggleRef}
+            type="checkbox"
+            id="nav-toggle"
+            className={styles['nav-toggle']}
+         />
 
          {/* Navs */}
          <div className={styles['navs']}>
