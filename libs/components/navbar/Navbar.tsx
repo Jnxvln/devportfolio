@@ -1,19 +1,23 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './Navbar.module.scss'
 import Link from 'next/link'
 
 export default function Navbar() {
    const navToggleRef = useRef<HTMLInputElement>(null)
+   const [navOpen, setNavOpen] = useState(false)
 
+   const toggleNavOpen = () => setNavOpen(!navOpen)
+
+   //  Handle closing nav menu on outside click
    useEffect(() => {
-      window.addEventListener('click', (evt) => {
-         if (evt?.target?.id === 'nav-label') {
-            console.log('clicked LABEL')
-            // evt.stopPropagation()
+      window.addEventListener('click', (e) => {
+         const { id } = e?.target
+
+         if (id === 'nav-label' || id === 'nav-toggle') {
+            e.stopPropagation()
          } else {
-            console.log('clicked BODY')
-            // navToggleRef.current.checked = false
+            setNavOpen(false)
          }
       })
    }, [])
@@ -25,6 +29,7 @@ export default function Navbar() {
             <Link href="/">JC</Link>
          </div>
 
+         {/* Nav Toggle and Label */}
          <label htmlFor="nav-toggle" id="nav-label" className={styles['nav-label']}>
             &#9776;
          </label>
@@ -32,6 +37,8 @@ export default function Navbar() {
             ref={navToggleRef}
             type="checkbox"
             id="nav-toggle"
+            checked={navOpen}
+            onChange={toggleNavOpen}
             className={styles['nav-toggle']}
          />
 
