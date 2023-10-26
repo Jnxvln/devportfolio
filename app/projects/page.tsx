@@ -1,4 +1,3 @@
-import Project from '@/libs/components/projects/Project/Project'
 import ProjectList from '@/libs/components/projects/ProjectList/ProjectList'
 import { TProject } from '@/libs/AppTypes'
 import { getProjects } from '../../libs/controllers/Projects'
