@@ -1,8 +1,15 @@
 .project-list-container {
    border: 2px dotted gray;
+
+   li {
+      list-style-type: none;
+   }
 }
 
 .project-list-item {
    border: 1px solid red;
-   margin-bottom: 1em;
+
+   &:not(:last-child) {
+      margin-bottom: 1em;
+   }
 }
