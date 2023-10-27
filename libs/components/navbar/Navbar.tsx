@@ -56,7 +56,7 @@ export default function Navbar() {
                   Projects
                </Link>
                <Link className={styles['link']} href="/resume">
-                  Resume
+                  Résumé
                </Link>
                <Link className={styles['link']} href="/contact">
                   Contact
@@ -65,18 +65,7 @@ export default function Navbar() {
 
             {/* Secondary Nav */}
             <div className={styles['nav-secondary']}>
-               <Link className={styles['link']} href="/dashboard">
-                  Dashboard
-               </Link>
-               <Link className={styles['link']} href="/register">
-                  Register
-               </Link>
-               <Link className={styles['link']} href="/login">
-                  Login
-               </Link>
-               <Link className={styles['link']} href="/logout">
-                  Logout
-               </Link>
+               {/* May or may not be used in the future */}
             </div>
          </div>
       </nav>

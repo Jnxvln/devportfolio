@@ -1,90 +1,91 @@
 $paddingUnit: 1em;
 
+.nav {
+   // border: 2px dashed cyan;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(52, 52, 52);
+   color: white;
+   font-size: 14pt;
+}
+
+.nav-toggle {
+   display: none;
+}
+
+.nav-label {
+   font-weight: bold;
+   font-size: 1.8rem;
+   padding: calc($paddingUnit / 2);
+
+   &:hover {
+      color: rgb(126, 219, 247);
+   }
+}
+
+.nav-toggle:checked + .nav-label {
+   color: orange;
+}
+
+.nav-toggle:checked + .navs {
+   display: block !important;
+}
+
+.brand {
+   // border: 1px dotted blue;
+   display: flex;
+   align-items: center;
+   font-weight: bold;
+   padding: 0 $paddingUnit;
+   text-align: center;
+}
+
+.navs {
+   display: none !important;
+   position: absolute;
+   right: 0;
+   top: 2em;
+   width: 60%;
+   height: auto;
+   background-color: rgb(90, 90, 90);
+   z-index: 5;
+   display: flex;
+   flex-direction: column;
+   max-width: 280px;
+}
+
+.nav-primary {
+   //  border: 2px dotted rgb(60, 212, 60);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-weight: bold;
+}
+
+.nav-secondary {
+   //  border: 2px dotted orange;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-weight: bold;
+}
+
+.link {
+   width: 100%;
+   text-align: center;
+   padding: calc($paddingUnit - 5px);
+   background-color: inherit;
+   transition: background-color 0.26s ease-in-out;
+
+   &:hover {
+      background-color: rgb(34, 34, 34);
+      transition: background-color 0.26s ease-in-out;
+   }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 80px) {
-   .nav {
-      // border: 2px dashed cyan;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgb(52, 52, 52);
-      color: white;
-      font-size: 14pt;
-   }
-
-   .nav-toggle {
-      display: none;
-   }
-
-   .nav-label {
-      font-weight: bold;
-      font-size: 1.8rem;
-      padding: calc($paddingUnit / 2);
-
-      &:hover {
-         color: rgb(126, 219, 247);
-      }
-   }
-
-   .nav-toggle:checked + .nav-label {
-      color: orange;
-   }
-
-   .nav-toggle:checked + .navs {
-      display: block !important;
-   }
-
-   .brand {
-      // border: 1px dotted blue;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      padding: 0 $paddingUnit;
-      text-align: center;
-   }
-
-   .navs {
-      display: none !important;
-      position: absolute;
-      right: 0;
-      top: 2em;
-      width: 60%;
-      height: auto;
-      background-color: rgb(90, 90, 90);
-      z-index: 5;
-      display: flex;
-      flex-direction: column;
-      max-width: 280px;
-   }
-
-   .nav-primary {
-      //  border: 2px dotted rgb(60, 212, 60);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-weight: bold;
-   }
-
-   .nav-secondary {
-      //  border: 2px dotted orange;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-weight: bold;
-   }
-
-   .link {
-      width: 100%;
-      text-align: center;
-      padding: calc($paddingUnit - 5px);
-      background-color: inherit;
-      transition: background-color 0.26s ease-in-out;
-
-      &:hover {
-         background-color: rgb(34, 34, 34);
-         transition: background-color 0.26s ease-in-out;
-      }
-   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
