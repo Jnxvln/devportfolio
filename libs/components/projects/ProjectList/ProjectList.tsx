@@ -5,11 +5,15 @@ import { TProject } from '@/libs/AppTypes'
 export default function ProjectList({ projects }: { projects: TProject[] }) {
    return (
       <ul className={styles['project-list-container']}>
-         {projects.map((project: TProject) => (
-            <li key={project._id} className={styles['project-list-item']}>
-               <Project project={project} />
-            </li>
-         ))}
+         {projects ? (
+            projects.map((project: TProject) => (
+               <li key={project._id} className={styles['project-list-item']}>
+                  <Project project={project} />
+               </li>
+            ))
+         ) : (
+            <div>There are currently no projects</div>
+         )}
       </ul>
    )
 }

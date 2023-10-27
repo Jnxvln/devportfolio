@@ -9,6 +9,29 @@ export default function Navbar() {
 
    const toggleNavOpen = () => setNavOpen(!navOpen)
 
+   const links = [
+      {
+         label: 'Home',
+         href: '/',
+      },
+      {
+         label: 'About',
+         href: '/about',
+      },
+      {
+         label: 'Projects',
+         href: '/projects',
+      },
+      {
+         label: 'Résumé',
+         href: '/resume',
+      },
+      {
+         label: 'Contact',
+         href: '/contact',
+      },
+   ]
+
    //  Handle closing nav menu on outside click
    useEffect(() => {
       window.addEventListener('click', (e) => {
@@ -46,21 +69,11 @@ export default function Navbar() {
          <div className={styles['navs']}>
             {/* Primary Nav */}
             <div className={styles['nav-primary']}>
-               <Link className={styles['link']} href="/">
-                  Home
-               </Link>
-               <Link className={styles['link']} href="/about">
-                  About
-               </Link>
-               <Link className={styles['link']} href="/projects">
-                  Projects
-               </Link>
-               <Link className={styles['link']} href="/resume">
-                  Résumé
-               </Link>
-               <Link className={styles['link']} href="/contact">
-                  Contact
-               </Link>
+               {links.map((link, i) => (
+                  <Link key={i} className={styles['link']} href={link.href}>
+                     {link.label}
+                  </Link>
+               ))}
             </div>
 
             {/* Secondary Nav */}
