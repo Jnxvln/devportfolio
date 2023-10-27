@@ -1,1 +1,21 @@
 @import '@/styles/colors.scss';
+
+.content-section {
+   padding: 2em;
+   //  border: 2px dashed blue;
+}
+
+.content-wrapper {
+   max-width: 600px;
+   margin: 0 auto;
+
+   p {
+      margin-bottom: 1em;
+      line-height: 1.5;
+      font-size: 1.1rem;
+   }
+}
+
+.subheading {
+   margin-bottom: 0.4em;
+}

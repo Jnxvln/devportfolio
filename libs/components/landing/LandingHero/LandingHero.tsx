@@ -19,7 +19,7 @@ export default function LandingHero() {
          <div className={styles['hero-content-container']}>
             <div className={styles['hero-content-inner-container']}>
                <h1 className={styles['title']}>Justin Cox</h1>
-               <h2 className={styles['subtitle']}>Web Developer</h2>
+               <h2 className={styles['subtitle']}>Developer Portfolio</h2>
             </div>
          </div>
       </div>
