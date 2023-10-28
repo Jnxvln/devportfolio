@@ -16,7 +16,7 @@ export default function Home() {
                      <h2 className={styles['subheading']}>Who am I?</h2>
                      <p>
                         My name is Justin, I am an aspiring web developer from Texarkana,
-                        TX who enjoys creating websites for people.
+                        TX who enjoys creating web experiences for people.
                      </p>
                   </div>
                </div>
