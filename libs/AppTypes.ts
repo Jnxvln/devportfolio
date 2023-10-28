@@ -1,6 +1,11 @@
 // PROJECTS
 export type TProject = {
-   _id?: string
-   title?: string
-   author?: string
+   _id?: String
+   title?: String
+   summary?: String
+   description?: String
+   url?: String
+   tech?: [String]
+   repoHref?: String
+   thumbnailHref?: String
 }
