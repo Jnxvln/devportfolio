@@ -1,21 +1,81 @@
 @import '@/styles/colors.scss';
 
 .content-section {
-   padding: 2em;
    //  border: 2px dashed blue;
+   padding: 2em;
 }
 
 .content-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 3em;
    max-width: 600px;
    margin: 0 auto;
+   padding: 2em;
 
    p {
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
       line-height: 1.5;
       font-size: 1.1rem;
    }
 }
 
+.avatar-img,
+.experience-img,
+.goals-img {
+   border-radius: 10pt;
+   object-fit: cover;
+}
+
 .subheading {
    margin-bottom: 0.4em;
+}
+
+.whoami {
+   display: flex;
+   gap: 1em;
+   flex-wrap: wrap;
+}
+
+.image-wrapper {
+   //  border: 1px dashed maroon;
+   position: relative;
+   width: 100%;
+   height: 300px;
+}
+
+.experience,
+.goals {
+   display: flex;
+   gap: 1em;
+   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 992px) {
+   .whoami,
+   .experience,
+   .goals {
+      flex-wrap: nowrap;
+   }
+
+   .goals-content-wrapper {
+      flex-grow: 1;
+   }
+
+   .goals-img {
+      // object-fit: fill;
+      height: 300px !important;
+   }
+
+   .image-wrapper {
+      height: auto;
+   }
+
+   .content-wrapper {
+      max-width: 1200px;
+   }
+
+   .goals {
+      flex-direction: row-reverse;
+   }
 }
