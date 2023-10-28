@@ -1,7 +1,6 @@
 @import '@/styles/colors.scss';
 
 .content-section {
-   //  border: 2px dashed blue;
    padding: 2em;
 }
 
@@ -32,9 +31,9 @@
 }
 
 .whoami {
-   display: flex;
-   gap: 1em;
-   flex-wrap: wrap;
+   p:last-child {
+      margin-bottom: 0;
+   }
 }
 
 .image-wrapper {
@@ -56,14 +55,10 @@
    .experience,
    .goals {
       flex-wrap: nowrap;
+      gap: 2em;
    }
 
-   .goals-content-wrapper {
-      flex-grow: 1;
-   }
-
-   .goals-img {
-      // object-fit: fill;
+   .goals-image-wrapper {
       height: 300px !important;
    }
 
@@ -77,5 +72,9 @@
 
    .goals {
       flex-direction: row-reverse;
+   }
+
+   .content-wrapper {
+      gap: 5em;
    }
 }

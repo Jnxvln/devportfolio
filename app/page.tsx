@@ -5,9 +5,7 @@ import Image from 'next/image'
 export default function Home() {
    return (
       <main>
-         <div className={styles['grid-hero']}>
-            <LandingHero />
-         </div>
+         <LandingHero />
 
          <section className={styles['content-section']}>
             <div className={styles['content-wrapper']}>
@@ -54,7 +52,9 @@ export default function Home() {
 
                {/* GOALS */}
                <div className={styles['goals']}>
-                  <div className={styles['image-wrapper']}>
+                  <div
+                     className={`${styles['image-wrapper']} ${styles['goals-image-wrapper']}`}
+                  >
                      <Image
                         className={styles['goals-img']}
                         src="/goals.jpg"
