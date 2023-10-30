@@ -2,7 +2,9 @@
 
 .project-list-container {
    border: 2px dotted gray;
-
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1em;
    li {
       list-style-type: none;
    }

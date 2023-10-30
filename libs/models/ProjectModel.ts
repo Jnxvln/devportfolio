@@ -6,6 +6,19 @@ const projectSchema = new Schema(
          type: String,
          required: true,
       },
+      datePublished: {
+         type: String,
+         required: false,
+      },
+      url: {
+         type: String,
+         required: false,
+      },
+      repoHref: {
+         type: String,
+         unique: true,
+         required: false,
+      },
       summary: {
          type: String,
          required: true,
@@ -17,11 +30,6 @@ const projectSchema = new Schema(
       tech: {
          type: [String],
          required: true,
-      },
-      repoHref: {
-         type: String,
-         unique: true,
-         required: false,
       },
       thumbnailHref: {
          type: String,

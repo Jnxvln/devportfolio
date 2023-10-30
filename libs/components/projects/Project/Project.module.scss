@@ -1,5 +1,55 @@
 @import '@/styles/colors.scss';
 
 .project-container {
-   border: 2px dashed maroon;
+   border: 3px dashed maroon;
+   width: 100%;
+}
+
+.project-title {
+   border: 1px dashed cornflowerblue;
+   font-weight: bold;
+   font-size: 1.3rem;
+}
+
+.project-id {
+   border: 1px dashed gray;
+   color: gray;
+   font-style: italic;
+}
+
+.project-datePublished {
+   border: 1px dashed orange;
+}
+
+.project-datePublished-notAvailable {
+   font-style: italic;
+   color: gray;
+}
+
+.project-summary {
+   border: 1px dashed green;
+}
+
+.project-url {
+   border: 1px dashed fuchsia;
+}
+
+.project-repoHref {
+   border: 1px dashed tomato;
+}
+
+.project-tech {
+   border: 1px dashed cyan;
+}
+
+.project-tech-list {
+   border: 1px dashed seagreen;
+}
+
+.project-tech-list-item {
+   border: 1px dotted orange;
+}
+
+.project-description {
+   border: 1px dashed blueviolet;
 }
