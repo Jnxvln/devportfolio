@@ -4,10 +4,10 @@ import { TProject } from '@/libs/AppTypes'
 
 export default function ProjectList({ projects }: { projects: TProject[] }) {
    return (
-      <ul className={styles['project-list-container']}>
+      <ul className={styles['project-list']}>
          {projects ? (
             projects.map((project: TProject) => (
-               <li key={project._id} className={styles['project-list-item']}>
+               <li key={project._id}>
                   <Project project={project} />
                </li>
             ))

@@ -10,6 +10,15 @@ export default async function Projects() {
       <section className={styles['projects-section']}>
          <h1 className={styles['projects-title']}>Projects</h1>
          <ProjectList projects={projects} />
+
+         <br />
+         <br />
+         <h2>Some other stuff</h2>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, eum!
+            Suscipit voluptatibus corrupti nesciunt enim ut odit repudiandae beatae iusto
+            aspernatur reiciendis at eaque, fuga laborum illo nisi libero quaerat.
+         </p>
       </section>
    )
 }

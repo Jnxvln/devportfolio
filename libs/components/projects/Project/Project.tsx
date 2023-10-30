@@ -1,48 +1,47 @@
 import { TProject } from '@/libs/AppTypes'
+import Image from 'next/image'
 import styles from './Project.module.scss'
+import Link from 'next/link'
 import dayjs from 'dayjs'
 
 export default function Project({ project }: { project: TProject }) {
    return (
       <div className={styles['project-container']}>
-         <div className={styles['project-title']}>{project.title}</div>
-         <div className={styles['project-id']}>Id: {project._id}</div>
-         <div className={styles['project-datePublished']}>
-            {project.datePublished ? (
-               <div>Published: {dayjs(project.datePublished).format('M/D/YY')}</div>
-            ) : (
-               <div>
-                  Published:{' '}
-                  <span className={styles['project-datePublished-notAvailable']}>
-                     Not Available
-                  </span>
-               </div>
-            )}
-         </div>
-         <div className={styles['project-summary']}>{project.summary}</div>
-         <div className={styles['project-url']}>Visit: {project.url}</div>
-         <div className={styles['project-repoHref']}>Repo: {project.repoHref}</div>
-         <div className={styles['project-tech']}>
-            Tech:{' '}
-            <div className={styles['project-tech-list']}>
-               {project.tech &&
-                  project.tech.length > 0 &&
-                  project.tech.map((tech, idx) => (
-                     <span
-                        key={`${tech.toLowerCase()}-${idx}`}
-                        className={styles['project-tech-list-item']}
-                     >
-                        {tech},{' '}
-                     </span>
-                  ))}
+         <div className={styles['main-content']}>
+            {/* Thumbnail */}
+            <div className={styles['thumbnail-wrapper']}>
+               <Image
+                  src="/placeholder_400.svg"
+                  alt={`${project.title?.toString()}`}
+                  fill
+                  className={styles['thumbnail']}
+               />
             </div>
+
+            {/* Title */}
+            <div className={styles['title']}>{project.title}</div>
+
+            {/* Summary */}
+            <div className={styles['summary']}>{project.summary}</div>
          </div>
-         <div className={styles['project-thumbnailHref']}>
-            Thumbnail Url: {project.thumbnailHref}
-         </div>
-         <div className={styles['project-description']}>
-            <div>Description: </div>
-            <div>{project.description}</div>
+
+         {/* Links */}
+         <div className={styles['links']}>
+            {project?.url && (
+               <Link href={project.url}>
+                  <button type="button" title="Visit this website">
+                     Visit
+                  </button>
+               </Link>
+            )}
+
+            {project?.repoHref && (
+               <Link href={project.repoHref}>
+                  <button type="button" title="Visit this repository">
+                     Repo
+                  </button>
+               </Link>
+            )}
          </div>
       </div>
    )
