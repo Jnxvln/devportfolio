@@ -18,17 +18,19 @@ export default function Project({ project }: { project: TProject }) {
                />
             </div>
 
-            {/* Title */}
-            <div className={styles['title']}>{project.title}</div>
+            <div style={{ borderLeft: '1px solid lightgray' }}>
+               {/* Title */}
+               <div className={styles['title']}>{project.title}</div>
 
-            {/* Summary */}
-            <div className={styles['summary']}>{project.summary}</div>
+               {/* Summary */}
+               <div className={styles['summary']}>{project.summary}</div>
+            </div>
          </div>
 
          {/* Links */}
          <div className={styles['links']}>
             {project?.url && (
-               <Link href={project.url}>
+               <Link href={project.url} target="_blank">
                   <button type="button" title="Visit this website">
                      Visit
                   </button>
@@ -36,7 +38,7 @@ export default function Project({ project }: { project: TProject }) {
             )}
 
             {project?.repoHref && (
-               <Link href={project.repoHref}>
+               <Link href={project.repoHref} target="_blank">
                   <button type="button" title="Visit this repository">
                      Repo
                   </button>

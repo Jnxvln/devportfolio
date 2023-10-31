@@ -1,20 +1,22 @@
 @import '@/styles/colors.scss';
 
+$defaultBorderRadius: 5pt;
+$defaultPadding: 0.7em;
+
 .project-container {
-   border: 2px solid red;
+   //  border: 1px solid rgb(196, 196, 196);
    width: 400px;
    margin: 0 auto;
+   border-radius: $defaultBorderRadius;
+   //  padding: calc($defaultPadding / 2);
+
+   box-shadow: 5px 7px 8px 0px rgba(0, 0, 0, 0.25);
+   //  -webkit-box-shadow: 10px 6px 2px 0px rgba(0, 0, 0, 0.13);
+   //  -moz-box-shadow: 10px 6px 2px 0px rgba(0, 0, 0, 0.13);
 
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-
-   > * {
-      border: 1px dotted gray;
-   }
-}
-
-.main-content {
 }
 
 .thumbnail-wrapper {
@@ -24,10 +26,18 @@
 
 .thumbnail {
    object-fit: cover;
+   border-top-left-radius: $defaultBorderRadius;
+   border-top-right-radius: $defaultBorderRadius;
 }
 
 .title {
    font-weight: bold;
+}
+
+.title,
+.summary,
+.links {
+   padding: $defaultPadding;
 }
 
 .links {
@@ -36,6 +46,8 @@
    justify-content: center;
    align-items: center;
    gap: 1em;
+   border-bottom-left-radius: $defaultBorderRadius;
+   border-bottom-right-radius: $defaultBorderRadius;
 
    button {
       padding: 0.2em 2em;
