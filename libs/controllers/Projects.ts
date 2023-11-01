@@ -1,4 +1,6 @@
-export const getProjects = async () => {
+import { TProject } from '../AppTypes'
+
+export const getProjects = async (limit?: number) => {
    const PROJECTS_ENDPOINT = 'http://localhost:3000/api/projects'
 
    const res = await fetch(PROJECTS_ENDPOINT, {
@@ -7,6 +9,7 @@ export const getProjects = async () => {
    if (!res.ok) throw new Error('Failed to fetch projects')
 
    const result = await res.json()
-   const projects = result.data
-   return projects
+   const projects: Array<TProject> = result.data
+
+   return projects.slice(0, limit)
 }

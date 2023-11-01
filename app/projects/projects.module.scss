@@ -1,14 +1,47 @@
 @import '@/styles/colors.scss';
 
-.projects-section {
-   padding: 1em;
-   width: 100%;
-   max-width: 1200px;
+$defaultMaxWidth: 900px;
+
+.page-container {
+   max-width: $defaultMaxWidth;
    margin: 0 auto;
 }
 
-.projects-title {
-   padding: 0.5em 0;
-   font-size: 2em;
+.projects-container {
+   padding: 1em;
+   width: 100%;
+}
+
+.projects-top4 {
+   margin-bottom: 2.5em;
+}
+
+.text-center {
    text-align: center;
+}
+
+.title {
+   padding: 0.5em 0;
+   font-size: 2rem;
+}
+
+.subtitle {
+   padding: 0.5em 0;
+   font-size: 1.5rem;
+}
+
+.extensions-list {
+   margin-top: 1em;
+   border: 1px dashed rgb(197, 197, 197);
+   padding: 1em;
+   max-height: 300px;
+   overflow: scroll;
+
+   li {
+      list-style: none;
+   }
+}
+
+.p {
+   line-height: 1.5;
 }
