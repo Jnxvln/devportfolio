@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ProjectList from '@/libs/components/projects/ProjectList/ProjectList'
 import { TProject } from '@/libs/AppTypes'
 import { getProjects } from '../../libs/controllers/Projects'
@@ -125,6 +126,14 @@ export default async function Projects() {
                <li>XML Tools</li>
                <li>YAML</li>
             </ul>
+         </section>
+
+         <section className={styles['resume-container']}>
+            <div className={styles['resume']}>
+               <Link href="/resume">
+                  <h3 className={styles['resume-link']}>View Résumé</h3>
+               </Link>
+            </div>
          </section>
       </section>
    )

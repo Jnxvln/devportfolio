@@ -53,3 +53,25 @@ $defaultMaxWidth: 900px;
 .p {
    line-height: 1.6;
 }
+
+.resume-container {
+   padding: 1.5em;
+
+   .resume {
+      margin: 1em 0;
+      background-color: rgb(131, 85, 67);
+      transition: background-color 0.28s ease-in-out;
+
+      &:hover {
+         background-color: rgb(104, 62, 45);
+         transition: background-color 0.28s ease-in-out;
+      }
+
+      .resume-link {
+         padding: 1em;
+         text-align: center;
+         color: white;
+         font-size: 1.3rem;
+      }
+   }
+}

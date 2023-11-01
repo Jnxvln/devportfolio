@@ -1,6 +1,7 @@
 import styles from './landing.module.scss'
 import LandingHero from '@/libs/components/landing/LandingHero/LandingHero'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
    return (
@@ -70,6 +71,12 @@ export default function Home() {
                         developer job.
                      </p>
                   </div>
+               </div>
+
+               <div className={styles['projects']}>
+                  <Link href="/projects">
+                     <h3 className={styles['projects-link']}>View Projects</h3>
+                  </Link>
                </div>
             </div>
          </section>

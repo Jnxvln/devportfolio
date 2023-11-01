@@ -51,6 +51,23 @@
    flex-wrap: wrap;
 }
 
+.projects {
+   background-color: rgb(153, 106, 97);
+   transition: background-color 0.28s ease-in-out;
+
+   &:hover {
+      background-color: rgb(138, 88, 78);
+      transition: background-color 0.28s ease-in-out;
+   }
+
+   .projects-link {
+      padding: 1em;
+      text-align: center;
+      color: white;
+      font-size: 1.3rem;
+   }
+}
+
 @media screen and (min-width: 992px) {
    .whoami,
    .experience,
