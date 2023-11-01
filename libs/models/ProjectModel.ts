@@ -34,7 +34,7 @@ const projectSchema = new Schema(
       thumbnailHref: {
          type: String,
          required: false,
-         default: 'https://placehold.co/128x128',
+         default: 'http://localhost:3000/placeholder_400.png',
       },
    },
    { timestamps: true }
