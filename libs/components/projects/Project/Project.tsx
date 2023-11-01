@@ -11,19 +11,28 @@ export default function Project({ project }: { project: TProject }) {
             {/* Thumbnail */}
             <div className={styles['thumbnail-wrapper']}>
                <Image
-                  src="/placeholder_400.svg"
-                  alt={`${project.title?.toString()}`}
+                  src={
+                     project?.thumbnailHref?.toString()
+                        ? project.thumbnailHref.toString()
+                        : '/placeholder_400.png'
+                  }
+                  alt={`${project.title?.toString()} thumbnail`}
                   fill
                   className={styles['thumbnail']}
                />
             </div>
 
-            <div style={{ borderLeft: '1px solid lightgray' }}>
-               {/* Title */}
-               <div className={styles['title']}>{project.title}</div>
+            <div
+               className={styles['content-details']}
+               style={{ borderLeft: '1px solid lightgray' }}
+            >
+               <div className={styles['title-url']}>
+                  {/* Title */}
+                  <div className={styles['title']}>{project.title}</div>
 
-               {/* Summary */}
-               <div className={styles['summary']}>{project.summary}</div>
+                  {/* Summary */}
+                  <div className={styles['summary']}>{project.summary}</div>
+               </div>
             </div>
          </div>
 
@@ -31,18 +40,30 @@ export default function Project({ project }: { project: TProject }) {
          <div className={styles['links']}>
             {project?.url && (
                <Link href={project.url} target="_blank">
-                  <button type="button" title="Visit this website">
+                  <button
+                     className={styles['project-btn']}
+                     type="button"
+                     title="Visit this website"
+                  >
                      Visit
                   </button>
                </Link>
             )}
 
-            {project?.repoHref && (
+            {project?.repoHref ? (
                <Link href={project.repoHref} target="_blank">
-                  <button type="button" title="Visit this repository">
+                  <button
+                     className={styles['project-btn']}
+                     type="button"
+                     title="Visit this repository"
+                  >
                      Repo
                   </button>
                </Link>
+            ) : (
+               <button disabled className={styles['project-btn']}>
+                  Repo (Private)
+               </button>
             )}
          </div>
       </div>
