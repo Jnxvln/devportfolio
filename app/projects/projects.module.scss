@@ -13,6 +13,7 @@ $defaultMaxWidth: 900px;
 }
 
 .projects-top4 {
+   margin-top: 0.5em;
    margin-bottom: 2.5em;
 }
 
@@ -21,13 +22,20 @@ $defaultMaxWidth: 900px;
 }
 
 .title {
+   background-color: rgb(51, 86, 119);
    padding: 0.5em 0;
    font-size: 2rem;
+   color: white;
+   border-radius: 6pt;
 }
 
 .subtitle {
    padding: 0.5em 0;
-   font-size: 1.5rem;
+   font-size: 1.7rem;
+}
+
+.section-setup {
+   padding: 1.5em;
 }
 
 .extensions-list {
@@ -43,5 +51,5 @@ $defaultMaxWidth: 900px;
 }
 
 .p {
-   line-height: 1.5;
+   line-height: 1.6;
 }

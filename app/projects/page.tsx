@@ -13,6 +13,7 @@ export default async function Projects() {
             <div className={styles['projects-top4']}>
                <h1 className={`${styles['title']} ${styles['text-center']}`}>Projects</h1>
                <h2 className={`${styles['subtitle']} ${styles['text-center']}`}>Top 4</h2>
+               <br />
                <ProjectList projects={projects} />
             </div>
          </section>
@@ -20,23 +21,20 @@ export default async function Projects() {
          <section className={styles['section-setup']}>
             <h2 className={styles['subtitle']}>My Setup</h2>
             <p className={styles['p']}>
-               While adaptable to many programming environments, I love using Visual
-               Studio Code as my IDE of choice, along with a handful of extensions to make
-               my programming more efficient.
+               I use <strong>Visual Studio Code</strong> as my IDE of choice, plus a
+               handful of extensions to improve my development experience, listed below.
             </p>
             <p className={styles['p']} style={{ marginTop: '0.5em' }}>
-               If you{"'"}re interested in the extensions I currently use, I{"'"}ve
-               disclosed the full list below:
+               Please note that these were added slowly over a long period of time, and
+               not all are actively used:
             </p>
             <ul className={styles['extensions-list']}>
                <li>:emojisense:</li>
                <li>.NET Install Tool</li>
                <li>#region folding for VS Code</li>
                <li>Astro</li>
-               <li>Atom One Dark Theme</li>
                <li>Auto Close Tag</li>
                <li>Auto Rename Tag</li>
-               <li>Ayu theme</li>
                <li>Babel JavaScript</li>
                <li>Better Comments</li>
                <li>Bulma</li>
@@ -48,7 +46,6 @@ export default async function Projects() {
                <li>CMake Tools</li>
                <li>Code Runner</li>
                <li>CodeLLDB</li>
-               <li>Community Material Theme</li>
                <li>CSS Peek</li>
                <li>Data Preview</li>
                <li>Dendron</li>
@@ -80,14 +77,10 @@ export default async function Projects() {
                <li>Lorem ipsum</li>
                <li>MagicPython</li>
                <li>Markdown All in One</li>
-               <li>Material Theme</li>
-               <li>Material Theme Icons</li>
                <li>Mustache</li>
                <li>next.js</li>
                <li>Noctis</li>
                <li>Node.js Modules Intellisense</li>
-               <li>One Dark Pro theme</li>
-               <li>Palenight Theme</li>
                <li>Paste Image</li>
                <li>Path IntelliSense</li>
                <li>Phaser JS</li>
@@ -104,7 +97,6 @@ export default async function Projects() {
                <li>Quick console log</li>
                <li>REST Client</li>
                <li>Sass (.sass only)</li>
-               <li>Shades of Purple</li>
                <li>styled-jsx</li>
                <li>stylus</li>
                <li>Svelte 3 Snippets</li>
@@ -113,7 +105,6 @@ export default async function Projects() {
                <li>Svelte Intellisense</li>
                <li>Svelte-format</li>
                <li>sveltekit-snippets</li>
-               <li>SynthWave {"'"}84 theme</li>
                <li>Tailwind CSS Intellisense</li>
                <li>Tailwind Docs</li>
                <li>Tailwind Snippets</li>
