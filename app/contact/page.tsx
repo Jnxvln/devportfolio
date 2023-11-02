@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import MessageBox from '@/libs/components/messageBox/MessageBox'
 import styles from './contact.module.scss'
 
 export default function Contact() {
@@ -7,6 +8,7 @@ export default function Contact() {
    const [email, setEmail] = useState('')
    const [message, setMessage] = useState('')
    const [submitted, setSubmitted] = useState(false)
+   const [messageBoxVisible, setMessageBoxVisible] = useState(true)
 
    const onSubmit = (e: React.FormEvent) => {
       e.preventDefault()
@@ -42,8 +44,24 @@ export default function Contact() {
       }
    }
 
+   const onCloseMessageBox = () => {
+      setMessageBoxVisible(false)
+   }
+
    return (
       <section className={styles['contact-container']}>
+         {/* -------------------------------------------------------- */}
+         {/* WORK IN PROGRESS */}
+         <MessageBox
+            visible={messageBoxVisible}
+            title="My First Message"
+            message="This is my first message box. This text is a little bit longer."
+            status="success"
+            buttonText="Close"
+            buttonAction={onCloseMessageBox}
+         />
+         {/* ------------------------------------------------------ */}
+
          <h1 className={styles['title']}>Contact Me</h1>
          <form onSubmit={onSubmit} className={styles['form']}>
             <div className={styles['control']}>

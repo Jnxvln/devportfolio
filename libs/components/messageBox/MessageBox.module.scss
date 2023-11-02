@@ -1,0 +1,73 @@
+.container {
+   position: fixed;
+   opacity: 1;
+   transition: opacity 0.28s ease-in;
+   background-color: rgb(61, 61, 61);
+   padding: 1.5em;
+   border-radius: 5pt;
+
+   box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.47);
+   -webkit-box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.47);
+   -moz-box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.47);
+}
+
+.container-success {
+   background-color: rgb(213, 228, 213);
+
+   .header {
+      color: rgb(28, 131, 28);
+   }
+}
+
+.container-visible-false {
+   opacity: 0;
+   transition: opacity 0.28s ease-in-out;
+}
+
+.container-error {
+   background-color: rgb(133, 46, 46);
+}
+
+.container-warning {
+   background-color: rgb(177, 93, 25);
+}
+
+.container-info {
+   background-color: rgb(51, 132, 156);
+}
+
+.header {
+   font-weight: bold;
+   color: white;
+   margin-bottom: 0.5em;
+   font-size: 1.1rem;
+}
+
+.footer {
+   margin-top: 1em;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.button {
+   padding: 0.65em 1.5em;
+   border: none;
+   background-color: rgb(78, 78, 78);
+   color: white;
+   border-radius: 4pt;
+   transition: background-color 0.28s ease-in-out;
+
+   &:hover {
+      cursor: pointer;
+      background-color: rgb(112, 112, 112);
+      transition: background-color 0.28s ease-in-out;
+   }
+}
+
+.button-success {
+   background-color: green;
+
+   &:hover {
+      background-color: rgb(11, 117, 11);
+   }
+}
