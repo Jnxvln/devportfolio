@@ -10,3 +10,18 @@ export type TProject = {
    tech?: [String]
    thumbnailHref?: String
 }
+
+export type TMailData = {
+   from: string
+   to: string
+   subject: string
+   text: string
+   html: string
+}
+
+export type TContactForm = {
+   name: string
+   email: string
+   message: string
+   style?: string
+}
